@@ -1,0 +1,136 @@
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2c3e50;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: "Press Start 2P", system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: linear-gradient(
+    135deg,
+    #f6d365,
+    #fda085
+  ); /* Warm gradient background */
+  gap: 14px;
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  border: 2px solid #ffffff;
+  padding: 14px 18px;
+  background: #ffffff;
+  color: #2c3e50;
+  font-size: 1em;
+}
+
+header button {
+  border-radius: 14px;
+  background: #3498db;
+  color: #ffffff;
+  transition-duration: 200ms;
+  cursor: pointer;
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+header button:hover {
+  background: #2980b9;
+  opacity: 0.9;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  margin-top: 10px;
+}
+
+.todoItem p {
+  flex: 1;
+  font-size: 1em;
+  color: #34495e;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: #e74c3c;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust the gap between Delete and Edit buttons */
+}
+
+
+
+.actionsContainer button:hover {
+  background: #c0392b;
+  opacity: 0.9;
+}
+
+@media (min-width: 640px) {
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
